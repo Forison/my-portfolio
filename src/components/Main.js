@@ -7,6 +7,7 @@ import calculate from '../skills/calculate.png';
 import estate from '../skills/estate.png';
 import axios from 'axios';
 import Slide from 'react-reveal/Slide';
+import Pulse from 'react-reveal/Pulse';
 
 export class Main extends Component {
 	constructor(props) {
@@ -62,14 +63,15 @@ export class Main extends Component {
 		return (
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-12 col-sm-12 col-md-4 col-lg-5 left">
+					<div className="col-12 col-sm-6 col-md-6 col-lg-5 left">
 						<div className="text-wrapper">
 						<h1 className="text-center mt-4 header">Hi, I am Addo.<br />I am a passionate fullstack web developer.</h1>
 						<div className="sub">
-							<p>I am currently working as a Technical Support Engineer and a Mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program" className="contact"> Microverse </a>but I am also open for new software development opportunities.</p>
+							<p>I am currently working as a Technical Support Engineer and a Mentor at <a href="https://support.microverse.org/en/articles/2476189-what-is-the-microverse-full-time-program" className="contact"> Microverse </a>but I am also open for new software development opportunities.
+							 Preferably fullstack development opportunities.</p>
 							<p>I enjoy building robust responsive web applications for clients and people all over the world.</p>
 							<p>Follow my work, words and photos below </p>
-							<div className="d-flex justify-content-around mx-auto">
+							<div className="d-flex justify-content-around mx-auto header-base">
 								<a href="https://github.com/Forison" target="_blank" rel="noopener noreferrer" className="contact p-1">
 									GitHub
 									</a>
@@ -90,13 +92,13 @@ export class Main extends Component {
 						</div>
 					</div>
 
-					<div className="col-12 col-sm-12 col-md-8 col-lg-7 overflow-auto right p-0">
+					<div className="col-12 col-sm-6 col-md-6 col-lg-7 overflow-auto right p-0">
 						<div className="skills">
 							<h2 className="p-3 text-light"> Skills</h2>
 							<div className="row mx-auto">
-								<div className="col-12 col-sm-6 col-md-4 col-lg-12">
-									<p  className="text-center">
-									JavaScript (ES5/ES6), Ruby, HTML, CSS, Ruby on Rails, React, jQuery, Bootstrap, Node, SQL, Postgresql, RSpec, Jest, Capybara, Git, GitHub, Webpack, Heroku, Amazon S3. French and English
+								<div className="col-12 col-sm-12 col-md-12 col-lg-12 mx-auto">
+									<p  className="text-center skill-text">
+									JavaScript (ES5/ES6), Ruby, HTML, CSS, Ruby on Rails, React, jQuery, Bootstrap, Node, SQL, Postgresql, RSpec, Jest, Capybara, Git, GitHub, Webpack, Heroku, Amazon S3.
 									</p>
 									<div className="clearFix"></div>
 								</div>
@@ -112,7 +114,7 @@ export class Main extends Component {
 										<p className="text-center">
 											This is a cloned version of the newsweek application. The page is a 
 										<a href="https://forison.github.io/Using-Bootstrap/" className="view">
-											 Responsive App
+											 responsive app
 										</a> 
 										  designed to fit all views. The page is built with HTML and Bootstrap. The application is successfully deployed to GitHub.
 										</p>
@@ -124,33 +126,35 @@ export class Main extends Component {
 									<img src={calculate} className="sector" />
 									<div className="row justify-content-center p-1">
 										<p>This is a calculator application, a
-										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> Responsive App</a>
+										<a href="https://guarded-harbor-05894.herokuapp.com/" className="view"> responsive app</a>
 										built mainly with React, Bootstrap, JSX for the purpose of learning. The application is successfully deployed to Heroku.
 										</p>
 									</div>
 								</div>
 								</Slide>
+								<Slide left>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto mt-3 shadow-lg p-4">
-									<img src={estate} className="sector-3" />
+									<img src={estate} className="sector" />
 									<div className="row justify-content-center p-1">
 										<p>This a real estate 
-										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> Mobile App </a>
+										<a href="https://frozen-bastion-98066.herokuapp.com" className="view"> mobile app </a>
 										built with React, Redux, Ruby on Rails, Bootstrap and JSX. The backend of this application is a fully tested <a href="https://github.com/Forison/Real-Estate-api">Rails Api</a> with Rspec which uses cloudinary for handling image upload.</p>
 									 The application is successfully deployed to Heroku.
 									</div>
 								</div>
-
+								</Slide>
+								<Slide right>
 								<div className="col-12 col-sm-12 col-md-12 col-lg-9 mx-auto mt-3 shadow-lg p-4 mb-2">
 									<img src={privateEvent} className="img-fluid sector-last" alt="private event page" />
 									<div className="row justify-content-center p-1">
-										<p>This is a social media App built with functionalities that mimics some of the core functionalities of Facebook. This a  
-										<a href="https://nosebook.herokuapp.com/" className="view "> Desktop App</a> designed to be view only desktops.
+										<p>This is a social media App built with functionalities that mimics some of the core functionalities of Facebook. This is a  
+										<a href="https://nosebook.herokuapp.com/" className="view "> desktop app</a> designed to be view only desktops.
 										This app is a pure Ruby on Rails application fully tested with Rspec and Capybara.
 										The application is successfully deployed to Heroku.
 										</p>
 									</div>
 								</div>
-
+								</Slide>
 							</div>
 						</div>
 						<div className="pre-footer">
@@ -196,6 +200,7 @@ export class Main extends Component {
 				<div>
 
 					<div className="row justify-content-center">
+						<Pulse>
 						{!show ? (
 							<button
 								type="submit"
@@ -227,7 +232,7 @@ export class Main extends Component {
 									}
 								</form>
 							</div>)}
-
+							</Pulse>
 					</div>
 				</div>
 			</div>
